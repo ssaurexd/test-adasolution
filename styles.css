@@ -1,0 +1,207 @@
+* {
+	box-sizing: border-box; 
+	margin: 0; padding: 0;
+}
+:root {
+	--text-color: #666666;
+	--bg-color: #BBE1FB;
+	--primary-color: #324BFF;
+	--bg-list: #F7F7F7;
+	box-sizing: border-box;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color: var(--text-color);
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	background-color: var(--bg-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.main {
+	width: 100%;
+	max-width: 700px;
+	border-radius: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #fff;
+	padding: 3rem 2rem;
+}
+
+.actions-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+/* --START-- Typography STYLES
+-------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	color: #000;
+	text-wrap: pretty;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+p {
+	text-wrap: balance;
+}
+h1 {
+	font-size: 2.3rem;
+	font-weight: 500;
+}
+.txt-center {
+	text-align: center;
+}
+/* --END-- Typography STYLES
+-------------------------------------------------------- */
+
+/* --START-- Shadow STYLES
+-------------------------------------------------------- */
+.shadow-1 {
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.02), 0px 0px 0px 1px rgba(27, 31, 35, 0.15);
+}
+.shadow-2 {
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+/* --END-- Shadow STYLES
+-------------------------------------------------------- */
+
+/* --START-- BTN STYLES
+-------------------------------------------------------- */
+.btn {
+	border: none;
+	padding: 10px 20px;
+	border-radius: 25px;
+	background-color: transparent;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+	min-width: 110px;
+}
+
+.btn:hover {
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.btn.btn-outline {
+	border: 1px solid var(--primary-color);
+	color: var(--primary-color);
+}
+
+
+.btn.btn-contained {
+	background-color: var(--primary-color);
+	border: 1px solid var(--primary-color);
+	color: var(--bg-color);
+}
+
+/* --END-- BTN STYLES
+-------------------------------------------------------- */
+
+/* --START-- List STYLES
+-------------------------------------------------------- */
+.list {
+	width: 100%;
+	background-color: var(--bg-list);
+	border-radius: 2px;
+	padding: 2rem 1rem;
+	margin: 20px 0;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.list li {
+	list-style: none;
+	padding: 10px 0;
+	padding: 10px 20px;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+	user-select: none;
+	border-radius: 2px;
+}
+
+.list li:hover {
+	color: #fff;
+	background-color: var(--primary-color);
+}
+
+.list li.focus {
+	color: #fff;
+	background-color: var(--primary-color);
+}
+
+/* --END-- List STYLES
+-------------------------------------------------------- */
+
+/* --START-- Modal STYLES
+-------------------------------------------------------- */
+.prompt {
+	display: none;
+	position: fixed;
+	inset: 0;
+	z-index: 10000;
+	background-color: rgba(0, 0, 0, 0.398);
+	padding: 40px;
+	overflow: auto;
+}
+
+.prompt.open {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+}
+
+.prompt-body {
+	min-width: 500px;
+	padding: 2rem 1rem;
+	background: #fff;
+	border-radius: 10px;
+}
+
+body.prompt-open {
+	/* body overflow is hidden to hide main scrollbar when modal window is open */
+	overflow: hidden;
+}
+
+.prompt .actions-container {
+	margin-top: 20px;
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+}
+.prompt .input-container {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.prompt .input-container label {
+	color: #000;
+}
+
+.prompt .input-container input {
+	padding: 10px 20px;
+	border-radius: 2px;
+	border: 1px solid #ccc;
+	font-size: 1rem;
+	background-color: var(--bg-list);
+}
+
+.prompt .input-container input:focus {
+	outline: none;
+	border: 1px solid var(--primary-color);
+}
+
+/* --END-- Modal STYLES
+-------------------------------------------------------- */
