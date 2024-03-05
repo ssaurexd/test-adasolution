@@ -8,14 +8,15 @@
 	--primary-color: #324BFF;
 	--bg-list: #F7F7F7;
 	box-sizing: border-box;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family: sans-serif;
 	color: var(--text-color);
 }
 
 body {
 	width: 100%;
 	min-height: 100vh;
-	background-color: var(--bg-color);
+	background: rgb(159,195,255);
+	background: linear-gradient(135deg, rgba(159,195,255,1) 0%, rgba(176,213,252,1) 50%, rgba(207,235,250,1) 100%);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -166,6 +167,7 @@ h1 {
 	padding: 2rem 1rem;
 	background: #fff;
 	border-radius: 10px;
+	animation: slide-down 0.3s ease-in-out;
 }
 
 body.prompt-open {
@@ -204,4 +206,19 @@ body.prompt-open {
 }
 
 /* --END-- Modal STYLES
+-------------------------------------------------------- */
+
+/* --START-- animations
+-------------------------------------------------------- */
+@keyframes slide-down {
+	0% {
+			transform: translateY(-100%);
+			opacity: 0;
+	}
+	100% {
+			transform: translateY(0);
+			opacity: 1;
+	}
+}
+/* --END-- animations
 -------------------------------------------------------- */
